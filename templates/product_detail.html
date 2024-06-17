@@ -1,0 +1,31 @@
+<!-- product_detail.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.productTitle }}</title>
+    <link rel="stylesheet" href="{% static 'css/bsstyle.css' %}">
+</head>
+<body>
+    <div id="product-detail">
+        <div class="header">
+            <h1>{{ product.productTitle }}</h1>
+        </div>
+        <div class="content">
+            {% if product.productImg %}
+            <img src="{{ product.productImg.url }}" alt="{{ product.productTitle }}">
+            {% endif %}
+            <p>{{ product.description }}</p>
+            {% if product.belong %}
+            <p>Belong by: {{ product.belong }}</p>
+            {% endif %}
+        </div>
+        <hr/>
+        <div class="foot">
+            <span>Copyright © 2024 BigSmile Studio</span>
+        </div>
+    </div>
+</body>
+</html>

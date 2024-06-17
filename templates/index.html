@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigSmile</title>
+    <link rel="stylesheet" href="/static/css/bsstyle.css">
+    <!-- <script src="/static/js/vue.js"></script>
+    <script src="/static/js/axiso.js"></script> -->
+</head>
+
+<body>
+    <div id="home">
+        <div class="header">
+            <!-- <h1 class="head">{{ siteInfo.title }}</h1> -->
+            <img class="img1" src="/upload/{{ siteInfo.logo }}" alt="">
+        </div>
+
+        <div class="content">
+            <div class="menu">
+                {% for class in classes %}
+                <div class="item">
+                <a href="/classes/?id= {{ class.id }}">{{ class.text }}</a>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="productlist">
+                {% if productlist %}
+                {% for product in productlist %}
+                <div class="product">
+                    <a href="{% url 'product_detail' product.id %}">
+                    <img  src="/upload/{{ product.productImg }}" alt=""  >
+                    <p>{{ product.productTitle }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>没有产品</p>
+                {% endif %}
+            </div>
+        </div>
+        <hr/>
+        <div class="foot">
+            <span>Copyright © 2024 BigSmile studio</span>
+        </div>
+    </div>
+    
+</body>
+
+</html>

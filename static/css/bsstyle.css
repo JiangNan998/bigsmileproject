@@ -1,0 +1,55 @@
+#home {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#home .header {
+    background: #00000070;
+} */
+
+#home .header h1 {
+    color: #fff;
+ }
+
+#home .header img{
+    width: 100%;
+    height: 300px;
+}
+
+#home .content .menu{
+    display: flex;
+    align-content: center;
+    padding: 5px 10px;
+}
+
+#home .content .menu .item {
+    width: 25%;
+    height: 25%;
+    border: 1px solid #000;
+    height: 30px;
+    line-height: 30px;
+}
+
+#home .content .productlist {
+    min-width: 100%;
+    min-height: auto;
+    padding-top: 20px;
+    height: auto;
+    border: 1px solid #000;
+    float: left;
+} 
+
+#home .content .productlist .product {
+
+    float: left;
+    margin-left: 20px;
+    width: 20%;
+}
+
+#home .content .productlist .product img{
+    width: 150px; 
+    height: 150px;
+}
